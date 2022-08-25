@@ -60,20 +60,16 @@ export default function Payment() {
                 onChange={(e) => setPaymentMethod(e.target.value)}
               >
                 <FormControlLabel
-                  label="PayPal"
+                  label="Secured online payment"
                   value="PayPal"
                   control={<Radio />}
                 ></FormControlLabel>
                 <FormControlLabel
-                  label="Stripe"
+                  label="Paypal"
                   value="Stripe"
                   control={<Radio />}
                 ></FormControlLabel>
-                <FormControlLabel
-                  label="Cash"
-                  value="Cash"
-                  control={<Radio />}
-                ></FormControlLabel>
+                
               </RadioGroup>
             </FormControl>
           </ListItem>

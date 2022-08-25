@@ -82,7 +82,7 @@ export default function Shipping() {
       <CheckoutWizard activeStep={1} />
       <Form onSubmit={handleSubmit(submitHandler)}>
         <Typography component="h1" variant="h1">
-          Shipping Address
+          Delivery Details
         </Typography>
         <List>
           <ListItem>
@@ -155,13 +155,13 @@ export default function Shipping() {
                   variant="outlined"
                   fullWidth
                   id="city"
-                  label="City"
+                  label="Suburb (e.g Flamewood)"
                   error={Boolean(errors.city)}
                   helperText={
                     errors.city
                       ? errors.city.type === 'minLength'
-                        ? 'City length is more than 1'
-                        : 'City is required'
+                        ? 'please enter your suburb name'
+                        : 'Suburb is required'
                       : ''
                   }
                   {...field}
@@ -183,13 +183,13 @@ export default function Shipping() {
                   variant="outlined"
                   fullWidth
                   id="postalCode"
-                  label="Postal Code"
+                  label="Phone number"
                   error={Boolean(errors.postalCode)}
                   helperText={
                     errors.postalCode
                       ? errors.postalCode.type === 'minLength'
-                        ? 'Postal Code length is more than 1'
-                        : 'Postal Code is required'
+                        ? 'Please enter valid number'
+                        : 'For convinience please enter your number'
                       : ''
                   }
                   {...field}
@@ -211,13 +211,13 @@ export default function Shipping() {
                   variant="outlined"
                   fullWidth
                   id="country"
-                  label="Country"
+                  label="Order Instuctions/Requirements"
                   error={Boolean(errors.country)}
                   helperText={
                     errors.country
                       ? errors.country.type === 'minLength'
-                        ? 'Country length is more than 1'
-                        : 'Country is required'
+                        ? 'type min 2 words to continue'
+                        : 'instruction is required for driver or store'
                       : ''
                   }
                   {...field}
